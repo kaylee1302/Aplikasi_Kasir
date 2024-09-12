@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aplikasi Kasir Sederhana</title>
+  <link href="css/tailwind.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 p-4">
+  <div class="container mx-auto">
+    <!-- Header -->
+    <h1 class="text-2xl font-bold text-center mb-6">Aplikasi Kasir Sederhana</h1>
+
+    <!-- Navigation Buttons -->
+    <div class="flex justify-center mb-6 space-x-4">
+      <a href="index.html" class="bg-blue-500 text-white px-4 py-2 rounded">Home</a>
+      <a href="login.html" class="bg-green-500 text-white px-4 py-2 rounded">Login</a>
+      <a href="admin.html" class="bg-red-500 text-white px-4 py-2 rounded">Admin</a>
+    </div>
+
+    <!-- Form Input Produk -->
+    <div class="mb-4">
+      <h2 class="text-xl font-semibold mb-2">Tambah Produk</h2>
+      <form id="product-form" class="space-y-4">
+        <div>
+          <label for="product-name" class="block">Nama Produk</label>
+          <input type="text" id="product-name" class="w-full p-2 border border-gray-300 rounded" placeholder="Nama Produk" required>
+        </div>
+        <div>
+          <label for="product-price" class="block">Harga (IDR)</label>
+          <input type="number" id="product-price" class="w-full p-2 border border-gray-300 rounded" placeholder="Harga Produk" required>
+        </div>
+        <div>
+          <label for="product-qty" class="block">Jumlah</label>
+          <input type="number" id="product-qty" class="w-full p-2 border border-gray-300 rounded" placeholder="Jumlah" required>
+        </div>
+        <button type="submit" class="w-full bg-blue-500 text-white p-2 rounded">Tambahkan ke Keranjang</button>
+      </form>
+    </div>
+
+    <!-- Tabel Keranjang -->
+    <div class="mb-4">
+      <h2 class="text-xl font-semibold mb-2">Keranjang Belanja</h2>
+      <table class="table-auto w-full bg-white rounded shadow">
+        <thead>
+          <tr class="bg-gray-200">
+            <th class="px-4 py-2">Nama Produk</th>
+            <th class="px-4 py-2">Harga (IDR)</th>
+            <th class="px-4 py-2">Jumlah</th>
+            <th class="px-4 py-2">Total (IDR)</th>
+            <th class="px-4 py-2">Aksi</th>
+          </tr>
+        </thead>
+        <tbody id="cart-items" class="text-center">
+          <!-- Item Keranjang akan ditambahkan di sini -->
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Total Belanja -->
+    <div class="bg-white p-4 rounded shadow">
+      <h2 class="text-xl font-semibold mb-2">Total Belanja</h2>
+      <div class="text-2xl font-bold mb-2" id="total-price">IDR 0</div>
+      <button id="checkout" class="w-full bg-green-500 text-white p-2 rounded">Checkout</button>
+    </div>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

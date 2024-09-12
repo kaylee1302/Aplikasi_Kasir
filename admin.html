@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Halaman Admin</title>
+  <link href="css/tailwind.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 p-4">
+  <div class="container mx-auto">
+    <!-- Header -->
+    <h1 class="text-3xl font-bold text-center mb-6">Dashboard Admin</h1>
+
+    <!-- Navigation Buttons -->
+    <div class="flex justify-center mb-6 space-x-4">
+      <a href="index.html" class="bg-blue-500 text-white px-4 py-2 rounded">Home</a>
+      <a href="login.html" class="bg-green-500 text-white px-4 py-2 rounded">Login</a>
+      <a href="admin.html" class="bg-red-500 text-white px-4 py-2 rounded">Admin</a>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md rounded mb-6">
+      <ul class="flex space-x-4 p-4 justify-center">
+        <li><a href="#" class="text-blue-500 hover:underline">Manajemen Produk</a></li>
+        <li><a href="#" class="text-blue-500 hover:underline">Laporan Penjualan</a></li>
+        <li><a href="#" class="text-blue-500 hover:underline">Logout</a></li>
+      </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <!-- Manajemen Produk -->
+      <div class="bg-white p-4 rounded shadow-md">
+        <h2 class="text-xl font-semibold mb-4">Manajemen Produk</h2>
+        <table class="table-auto w-full bg-gray-100 rounded">
+          <thead class="bg-gray-300">
+            <tr>
+              <th class="px-4 py-2">Kode Produk</th>
+              <th class="px-4 py-2">Nama Produk</th>
+              <th class="px-4 py-2">Harga</th>
+              <th class="px-4 py-2">Stok</th>
+              <th class="px-4 py-2">Aksi</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Daftar Produk -->
+            <tr class="text-center">
+              <td class="border px-4 py-2">001</td>
+              <td class="border px-4 py-2">Produk A</td>
+              <td class="border px-4 py-2">IDR 10,000</td>
+              <td class="border px-4 py-2">100</td>
+              <td class="border px-4 py-2">
+                <button class="bg-yellow-500 text-white px-2 py-1 rounded">Edit</button>
+                <button class="bg-red-500 text-white px-2 py-1 rounded">Hapus</button>
+              </td>
+            </tr>
+            <!-- Tambah produk lainnya disini -->
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Laporan Penjualan -->
+      <div class="bg-white p-4 rounded shadow-md">
+        <h2 class="text-xl font-semibold mb-4">Laporan Penjualan</h2>
+        <table class="table-auto w-full bg-gray-100 rounded">
+          <thead class="bg-gray-300">
+            <tr>
+              <th class="px-4 py-2">Tanggal</th>
+              <th class="px-4 py-2">Total</th>
+              <th class="px-4 py-2">Kasir</th>
+              <th class="px-4 py-2">Detail</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Daftar Transaksi -->
+            <tr class="text-center">
+              <td class="border px-4 py-2">2024-09-10</td>
+              <td class="border px-4 py-2">IDR 1,000,000</td>
+              <td class="border px-4 py-2">Kasir A</td>
+              <td class="border px-4 py-2">
+                <button class="bg-blue-500 text-white px-2 py-1 rounded">Lihat Detail</button>
+              </td>
+            </tr>
+            <!-- Tambah transaksi lainnya disini -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
